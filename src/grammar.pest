@@ -1,0 +1,5 @@
+WHITESPACE = _{ " " | "\t" }
+email      = { local_part ~ "@" ~ domain }
+local_part = @{ ASCII_ALPHANUMERIC+ }
+domain     = { subdomain ~ ("." ~ subdomain)+ }
+subdomain  = @{ ASCII_ALPHANUMERIC+ }

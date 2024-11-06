@@ -1,0 +1,14 @@
+[package]
+name = "tikh_email_parser"
+version = "0.1.0"
+authors = ["Tikhon Ishchenko <tikhon.ishchenko@ukma.edu.ua>"]
+edition = "2021"
+description = "Simple parser of email addresses. "
+license = "MIT"
+
+[dependencies]
+pest = "2.1"
+pest_derive = "2.1"
+thiserror = "1.0"
+anyhow = "1.0"
+clap = { version = "4.1", features = ["derive"] }
