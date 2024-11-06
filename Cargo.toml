@@ -3,8 +3,10 @@ name = "tikh_email_parser"
 version = "0.1.0"
 authors = ["Tikhon Ishchenko <tikhon.ishchenko@ukma.edu.ua>"]
 edition = "2021"
-description = "Simple parser of email addresses. "
+description = "Simple parser of email addresses."
 license = "MIT"
+documentation = "https://docs.rs/tikh_email_parser"
+repository = "https://github.com/your-username/tikh_email_parser"
 
 [dependencies]
 pest = "2.1"

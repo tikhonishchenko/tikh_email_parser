@@ -1,3 +1,5 @@
-test@example.com
-test@mail.example.com
+user@example.com
+user(comment)@example.com
+user.name+tag@example.com
+"user@name"@example.com
 invalid-email@@example.com

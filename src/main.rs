@@ -6,7 +6,7 @@ use tikh_email_parser::EmailAddress;
 
 #[derive(Parser)]
 #[command(name = "tikh_email_parser")]
-#[command(about = "Простий парсер Email.")]
+#[command(about = "CLI-додаток для парсингу електронних адрес.")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -14,7 +14,9 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    Parse { input_file: String },
+    Parse {
+        input_file: String,
+    },
     Credits,
 }
 
@@ -31,7 +33,7 @@ fn main() -> Result<()> {
                 match EmailAddress::parse(&line) {
                     Ok(email) => println!(
                         "Email Правильний! Локальна частина: {} Домен: {}",
-                        email.local_part, email.domain
+                        email.local, email.domain_part
                     ),
                     Err(e) => eprintln!("Помилка! '{}': {}", line, e),
                 }
