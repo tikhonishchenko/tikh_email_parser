@@ -14,9 +14,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
-    Parse {
-        input_file: String,
-    },
+    Parse { input_file: String },
     Credits,
 }
 
