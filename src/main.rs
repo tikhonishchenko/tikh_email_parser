@@ -6,7 +6,8 @@ use tikh_email_parser::EmailAddress;
 
 #[derive(Parser)]
 #[command(name = "tikh_email_parser")]
-#[command(about = "CLI-додаток для парсингу електронних адрес.")]
+#[command(about = "CLI-додаток для парсингу електронних адрес.", long_about = None)]
+#[command(author, version)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -14,9 +15,12 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Commands {
+    /// Парсинг файлу з електронними адресами для перевірки кожного рядка.
     Parse {
+        /// Шлях до файлу, що містить електронні адреси для парсингу.
         input_file: String,
     },
+    /// Інформація про автора програми.
     Credits,
 }
 
