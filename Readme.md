@@ -40,18 +40,18 @@ cargo run -- credits
 
 makefile
 Copy code
-email          = { cfws? ~ local_part ~ "@" ~ domain ~ cfws? }
-local_part     = { dot_atom | quoted_string }
-domain         = { dot_atom }
-dot_atom       = { dot_atom_text ~ ("." ~ dot_atom_text)* }
-dot_atom_text  = { [a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+ }
-quoted_string  = { "\"" ~ qcontent* ~ "\"" }
-qcontent       = { qtext | quoted_pair }
-qtext          = { !["\\] ~ ANY }
-quoted_pair    = { "\\" ~ ANY }
-cfws           = { (comment | FWS)+ }
-comment        = { "(" ~ (ctext | quoted_pair | comment)* ~ ")" }
-ctext          = { ![()\\] ~ ANY }
-FWS            = { (WSP* ~ CRLF)? ~ WSP+ }
-WSP            = _{ " " | "\t" }
-CRLF           = _{ "\r\n" | "\n" }
+email          = { cfws? ~ local_part ~ "@" ~ domain ~ cfws? } <br />
+local_part     = { dot_atom | quoted_string } <br />
+domain         = { dot_atom }<br />
+dot_atom       = { dot_atom_text ~ ("." ~ dot_atom_text)* }<br />
+dot_atom_text  = { [a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+ }<br />
+quoted_string  = { "\"" ~ qcontent* ~ "\"" }<br />
+qcontent       = { qtext | quoted_pair }<br />
+qtext          = { !["\\] ~ ANY }<br />
+quoted_pair    = { "\\" ~ ANY }<br />
+cfws           = { (comment | FWS)+ }<br />
+comment        = { "(" ~ (ctext | quoted_pair | comment)* ~ ")" }<br />
+ctext          = { ![()\\] ~ ANY }<br />
+FWS            = { (WSP* ~ CRLF)? ~ WSP+ }<br />
+WSP            = _{ " " | "\t" }<br />
+CRLF           = _{ "\r\n" | "\n" }<br />
