@@ -38,8 +38,7 @@ cargo run -- credits
 ## Граматика
 Парсер використовує наступну граматику:
 
-makefile
-Copy code
+WHITESPACE = _{ " " | "\t" }
 email          = { cfws? ~ local_part ~ "@" ~ domain ~ cfws? } <br />
 local_part     = { dot_atom | quoted_string } <br />
 domain         = { dot_atom }<br />
